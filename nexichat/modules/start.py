@@ -127,10 +127,4 @@ async def help(client: nexichat, m: Message):
             reply_markup=InlineKeyboardMarkup(HELP_BUTN),
         )
         await add_served_chat(m.chat.id)
-        
-
-
-@nexichat.on_message(filters.new_chat_members)
-async def welcome(_, m: Message):
-    for member in m.new_chat_members:
-        await m.reply_photo(photo=random.choice(IMG), caption=START)
+       
